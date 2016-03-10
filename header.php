@@ -14,12 +14,17 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
+  <div class="wrapper">
+    <div class="header__title">
+    <div class="header__title--box">
+      <h1 class="header__title--firstName">
+        <?php the_field('header_first_name'); ?>
     </h1>
-  </div> <!-- /.container -->
-</header><!--/.header-->
+      <h1 class="header__title--surname">
+        <?php the_field('header_surname');?>
+    </h1>
+    </div> <!--end title box -->
+    </div> <!--end header title -->
+  </div> <!-- end wrapper -->
+</header><!--end header-->
 

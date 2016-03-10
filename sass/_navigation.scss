@@ -5,10 +5,7 @@ ul.menu {
 		display: inline;
 		margin-right: 10px;
 		a {
-			color: #333;
 			padding: 10px;
-			background: #333;
-			color: white;
 		}
 	}
 }
@@ -18,8 +15,8 @@ aside {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: linear-gradient(200deg, #27156E, #6A2A88, #9F4981);
-	transition: all .5s ease;
+	background-opacity: 0.2;
+	transition: all .4s ease;
 	z-index: 2;
 	opacity: 0;
 	visibility: hidden;
@@ -38,10 +35,7 @@ aside {
 	li {
 		margin-right: 10px;
 		a {
-			color: #333;
 			padding: 10px;
-			background: #333;
-			color: white;
 		}
 	}
 }

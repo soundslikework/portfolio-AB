@@ -5,10 +5,11 @@ app.init = function() {
 };
 app.grids = function() {
 	$('.grid').isotope({
+		percentPosition: true,
   		itemSelector: '.grid-item',
   		masonry: {
-  			columnWidth: 20,
-  			gutter: 5
+  			columnWidth: '.grid-sizer',
+  			gutter: '.gutter-sizer'
   		}	
   	});
 	$('.filter-button-group').on('click', 'button', function() {

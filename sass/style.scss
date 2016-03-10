@@ -16,6 +16,7 @@
 @import 'comments';
 @import 'footer';
 @import 'front-page';
+@import 'header';
 @import 'grid';
 /*
 ====================================
@@ -34,6 +35,7 @@ body {
 .wrapper {
 	max-width: 1080px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .content {
@@ -45,10 +47,6 @@ body {
 .full {
 	width: 100%;
 }
-
-
-
-
 
 
 

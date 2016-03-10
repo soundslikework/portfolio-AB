@@ -1,24 +1,30 @@
-#about {
-@include background(linear-gradient(red, green) left repeat);
-}
 .aboutText {
-	width: 100%;
+	width: 80%;
+	margin: 0 auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row wrap;
 	justify-content: space-between;
+	@include media($tablet) {
+		flex-direction: column;
+	}
 }
 .aboutLeft {
-	width: 50%;
+	width: 45%;
+	@include media($tablet) {
+		
+	}
 }
 .aboutRight {
-	width: 50%;
+	width: 45%;
+	@include media($tablet) {
+	}
 }
 .highlight {
 	color: $accentColor;
 }
 
 ul.aboutIcons {
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
 	list-style: none;
 	display: flex;
