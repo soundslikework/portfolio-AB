@@ -1,0 +1,33 @@
+#about {
+@include background(linear-gradient(red, green) left repeat);
+}
+.aboutText {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.aboutLeft {
+	width: 50%;
+}
+.aboutRight {
+	width: 50%;
+}
+.highlight {
+	color: $accentColor;
+}
+
+ul.aboutIcons {
+	width: 80%;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	li {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
