@@ -21,7 +21,6 @@
             <p><?php the_field('about_text_right')?> </p>
         </div>
       </div><!--end abouttext -->
-    </div> <!-- /.wrapper -->
 </section>
 <section id="folio">
   <h2>Portfolio</h2>
@@ -45,4 +44,5 @@
   <p><?php the_field('profile_text') ?></p>
 </section>
 
+    </div> <!-- /.wrapper -->
 <?php get_footer(); ?>

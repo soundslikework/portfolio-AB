@@ -25,6 +25,5 @@
     </h1>
     </div> <!--end title box -->
     </div> <!--end header title -->
-  </div> <!-- end wrapper -->
+  </div> <!-- end wrapper --> 
 </header><!--end header-->
-

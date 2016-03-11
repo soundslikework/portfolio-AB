@@ -24,6 +24,27 @@ aside {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+		&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: $triangleRev;
+		border-color: $accentColor transparent;
+		}
+		&:after {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: $triangleRev;
+		border-color: transparent $accentColor;
+		}	
 	ul.menu {
 	margin: 0;
 	padding: 0;
