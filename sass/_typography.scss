@@ -9,6 +9,7 @@ $tomato: #FF6347; /*tomato*/
 $blue: #5F9EA0; /*cadetblue*/
 $secondBG: #F0F8FF;
 $snow: #FFFAFA;
+$darkBG: #696969;
 
 /* fonts */
 
@@ -30,9 +31,9 @@ $triangleBRev: 80px 0 0 400px;
 
 /* size & color assignment */
 header {
-	@include background($mainBG, url('images/PAM_8797.jpg'));
+	// @include background($mainBG, url('images/PAM_8797.jpg'));
 	background-size: cover;
-	background-position: right;
+	background-attachment: fixed;
 	position: relative;
 	&:after {
 		content: "";
@@ -48,108 +49,109 @@ header {
 }
 	#about {
 		padding: 100px 0;
-		background: $altBG;
+		background: $mainBG;
 		position: relative;
 		&:before {
-		content: "";
-		position: absolute;
-		top: -80px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangleRev;
-		border-color: transparent $mainBG transparent transparent;
+			content: "";
+			position: absolute;
+			top: -80px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: transparent $mainBG transparent transparent;
 		}
 		&:after {
-		content: "";
-		position: absolute;
-		bottom: -80px;
-		z-index:1;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangleRev;
-		border-color: $accentColor transparent;
+			content: "";
+			position: absolute;
+			bottom: -80px;
+			z-index:1;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: $mainBG transparent;
 		}
 	}
 	#folio {
-		background: $mainBG;
+		background: $alt2BG;
 		position: relative;
 		padding: 100px 0;
 		&:before {
-		content: "";
-		position: absolute;
-		top: 0px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangle;
-		border-color: $accentColor transparent;
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: $mainBG transparent;
 		}
 		&:after {
-		content: "";
-		position: absolute;
-		bottom: 0px;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangle;
-		border-color: transparent $accentColor;
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: transparent $mainBG;
 		}	
 	}
 	#blog {
 		position: relative;
 		padding: 100px 0;
+		background: $mainBG;
 		&:before {
-		content: "";
-		position: absolute;
-		top: -80px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangleRev;
-		border-color: transparent $accentColor;
+			content: "";
+			position: absolute;
+			top: -80px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: transparent $mainBG;
 		}
 		&:after {
-		content: "";
-		z-index:1;
-		position: absolute;
-		bottom: -80px;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangleRev;
-		border-color: $accentColor transparent;
+			content: "";
+			z-index:1;
+			position: absolute;
+			bottom: -80px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: $mainBG transparent;
 		}
 	}
 	#profile {
 		position: relative;
-		background: $mainBG;
-		padding: 200px 0;
+		background: $darkBG;
+		padding: 100px 0;
 		&:before {
-		content: "";
-		position: absolute;
-		top: 0px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangle;
-		border-color: $accentColor transparent;
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: $mainBG transparent;
 		}
 		&:after {
-		content: "";
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangle;
-		border-color: transparent $accentColor;
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: transparent $alt2BG;
 		}	
 	}
 footer {
@@ -157,21 +159,21 @@ footer {
 	position: relative;
 	background: $alt2BG;
 		&:before {
-		content: "";
-		position: absolute;
-		top: -80px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: $triangleRev;
-		border-color: transparent $accentColor;
+			content: "";
+			position: absolute;
+			top: -80px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: transparent $alt2BG;
 		}
 }
 aside {
-	background: rgba(0,0,0,0.5);
+	background: rgba(245,245,245,0.9);
 	li a {
-		color: $accentColor;
+		color: $tomato;
 		text-transform: uppercase;
 		font-size: 2rem;
 		transition: all .5s;
@@ -186,12 +188,12 @@ aside {
 body {
 	font-size: 62.5%;
 }
-h1, h2 {
-	font-family: $altFont;
+h1, h2, h3 {
+	font-family: $titleFont;
 	margin-top: 0;
 }
 a {
-	color: #BA209B;
+	color: $tomato;
 	text-decoration: none;
 	&:hover {
 		color: #D424B1;
@@ -202,7 +204,7 @@ a {
 
 p {
 	line-height: 1.5;
-	font-family: $titleFont;
+	font-family: $parFont;
 }
 
 /*blockquotes*/
@@ -213,17 +215,6 @@ blockquote {
 	padding: 20px;
 	p {
 		margin-top: 0;
-	}
-}
-
-/*tables*/
-
-table {
-	td {
-		padding: 10px;
-	}
-	tr td:first {
-		padding-right: 0;
 	}
 }
 

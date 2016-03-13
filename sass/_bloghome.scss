@@ -1,0 +1,97 @@
+.blogHeader {
+	height: 50vh;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: $triangle;
+		border-color: transparent transparent transparent $mainBG;
+		}
+	.header__title {
+		width: 50%;
+		text-align:center;
+		display: flex;
+		flex-direction: row wrap;
+		justify-content: center;
+		align-items: center;
+		@include media($tablet) {
+			@include fill-parent();
+		}
+
+		&--box {
+			margin-top: 10%;
+		}
+		&--firstName {
+			font-family: $titleFont;
+			font-size: 3rem;
+			font-weight:300;
+		}
+		&--surname {
+			font-family: $titleFont;
+			font-weight: 700;
+			text-align: left;
+			font-size: 2.1rem;
+		}
+		h1 {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+h2.entry-title {
+	position: relative;
+		&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 1px;
+		width: 10%;
+		border-bottom: 1px solid black;
+	}
+}
+section#blogHome {
+	padding: 1% 0 5%;
+	position: relative;
+				&:before {
+			content: "";
+			position: absolute;
+			top: -80px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangleRev;
+			border-color: transparent $mainBG transparent transparent;
+		}
+				&:after {
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: transparent $alt2BG;
+		}	
+}
+.blogWrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.blogHome {
+	width: 75%;
+}

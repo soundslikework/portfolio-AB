@@ -1,12 +1,12 @@
-<?php get_header(); ?>
-
-<div class="main">
-  <div class="container">
-    <div class="content">
+<?php get_template_part('header-blog'); ?>
+<?php get_template_part('nav');?>
+  <section id="blogHome">
+  <div class="blogWrapper">
+  <div class="blogHome">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <h2 class="entry-title"><?php the_title(); ?></h2>
 
           <div class="entry-meta">
             <?php hackeryou_posted_on(); ?>
@@ -34,12 +34,8 @@
         <?php comments_template( '', true ); ?>
 
       <?php endwhile; // end of the loop. ?>
-
-    </div> <!-- /.content -->
-
+</div>
     <?php get_sidebar(); ?>
-
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
-
+</div>
+</section>
 <?php get_footer(); ?>

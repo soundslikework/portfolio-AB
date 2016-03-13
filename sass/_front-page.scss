@@ -1,43 +1,140 @@
+h2.fpTitle, h3.fpTitle {
+	width: 10%;
+	margin: 0 auto 2%;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -4px;
+		left: 5px;
+		height: 5px;
+		width: 50%;
+		border-bottom: 1px solid black;
+	}
+	&__Inner {
+		width: 50%;
+		text-align: center;
+	}
+}
 #about {
 	// padding: 120px 0;
 }
-
-.aboutText {
+ul.aboutIcons {
 	width: 80%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: row wrap;
-	justify-content: space-between;
-	@include media($tablet) {
-		flex-direction: column;
-	}
-}
-.aboutLeft {
-	width: 45%;
-	@include media($tablet) {
-		
-	}
-}
-.aboutRight {
-	width: 45%;
-	@include media($tablet) {
-	}
-}
-.highlight {
-	color: $accentColor;
-}
-
-ul.aboutIcons {
-	width: 75%;
-	margin: 0 auto;
+	padding-left: 0;
 	list-style: none;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	li {
+		width: 20%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+	i {
+		font-size: 2rem;
+	}
+}
+.aboutText {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2% 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	@include media($tablet) {
+		flex-direction: column;
+	}
+}
+.aboutLeft {
+	width: 25%;
+	font-weight: 700;
+	margin: 0 1%;
+	text-align: right;
+	@include media($tablet) {
+		width: 100%;
+	}
+}
+.aboutRight, .aboutCenter {
+	width: 25%;
+	margin: 0 1%;
+	@include media($tablet) {
+		width: 100%;
+	}
+}
+
+.fpBlog {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	// align-items: center;
+}
+.blogPost {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+	padding: 1%;
+	ul.post-categories {
+		padding-left: 0;
+		list-style: none;
+	}
+	&__content {
+		align-self: center;
+	}
+	&__underline {
+			margin: 0 auto;
+			height: 1px;
+			display: block;
+			border-bottom: 1px solid $fontColor;
+	}
+}
+.first {
+	background: $darkBG;
+	display: flex;
+	width: 25%;
+	flex-direction: column;
+	justify-content: center;
+	// padding: 25px;
+	margin-right: 5%;
+	text-align: center;
+}
+.postContainer {
+	width: 50%;
+	display: flex;
+	flex-flow: row wrap;
+}
+.profileText {
+	padding: 2% 0;
+	width: 60%;
+	margin: 0 auto;
+}
+ul.workflowIcons {
+	list-style: none;
+	width: 80%;
+	margin: 0 auto;
+	padding-left: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	li {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	i {
+		font-size: 2rem;
+		color: $mainBG;
 	}
 }

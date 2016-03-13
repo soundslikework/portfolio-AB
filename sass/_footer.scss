@@ -1,3 +1,35 @@
 footer {
-	clear: both;
+	p {
+		text-align: center;
+	}
+}
+.contactEmail {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+div.wpcf7 {
+	margin: 0 auto;
+	width: 30%;
+	input[type=text], input[type=email], textarea {
+		width: 100%;
+		border: none;
+		padding: 5px 0;
+		background: $mainBG;
+	}
+}
+ul#menu-social {
+	width: 30%;
+	padding: 1% 0;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	li {
+		font-size: 2rem;
+	}
 }

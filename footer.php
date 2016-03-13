@@ -1,6 +1,6 @@
-<footer>
-  <div class="container">
-  <h2>Contact</h2>
+<footer id="contact">
+  <div class="wrapper">
+  <h2 class="fpTitle">Contact</h2>
   <div class="contactEmail">
   	<p>Let's make cool stuff!</p>
   	<a href="mailto:adam@adambrady.ca">adam [at] adambrady.ca</a>

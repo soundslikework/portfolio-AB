@@ -15,7 +15,6 @@ aside {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-opacity: 0.2;
 	transition: all .4s ease;
 	z-index: 2;
 	opacity: 0;
@@ -32,7 +31,7 @@ aside {
 		height: 0;
 		border-style: solid;
 		border-width: $triangleRev;
-		border-color: $accentColor transparent;
+		border-color: $darkBG transparent;
 		}
 		&:after {
 		content: "";
@@ -43,7 +42,7 @@ aside {
 		height: 0;
 		border-style: solid;
 		border-width: $triangleRev;
-		border-color: transparent $accentColor;
+		border-color: transparent $darkBG;
 		}	
 	ul.menu {
 	margin: 0;
@@ -72,6 +71,12 @@ aside {
 	position: absolute;
 	right: 5%;
 	top: 10%;
+	cursor: pointer;
+	@include media($mobile) {
+		position: fixed;
+		right: 2%;
+		top: 5%;
+	}
   .line {
     display: block;
     width: 100%;

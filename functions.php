@@ -48,6 +48,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Raleway:700,300|Open+Sans|Merriweather');
+	wp_enqueue_style('devicons', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css?ver=4.4.2');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -73,7 +74,13 @@ function hackeryou_scripts() {
   	null,
   	true
   );
-
+  wp_enqueue_script(
+    'smoothscroll', //handle
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
@@ -285,3 +292,26 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+/* get thumbnail url */
+function hackeryou_get_thumbnail_url($post) {
+    $imageID = get_post_thumbnail_id($post->ID);
+    $imageURL = wp_get_attachment_url($imageID);
+    return $imageURL;
+}
+
+/*set up custom header */
+$defaults = array(
+	'default-image' => get_template_directory_uri() . '/assets/hero.jpg',
+    'random-default'         => false,
+    'width'                  => '1200px',
+    'height'                 => '900px',
+    'flex-height'            => false,
+    'flex-width'             => false,
+    'default-text-color'     => '',
+    'header-text'            => true,
+    'uploads'                => true,
+    'wp-head-callback'       => '',
+    'admin-head-callback'    => '',
+    'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );

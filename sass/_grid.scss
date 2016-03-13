@@ -1,8 +1,23 @@
-
+.button-group {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 2% 0;
+	button {
+		border: none;
+		background: $accentColor;
+		margin: 0 1%;
+		text-transform: uppercase;
+	}
+}
 .grid {
 	width: 75%;
-	// height: 800px;
 	margin: 0 auto;
+	@include media($mobile) {
+		width: 95%;
+	}
 	.grid-sizer {
 		width: 1%;
 	}
@@ -15,10 +30,16 @@
 		margin-bottom: 30px;
 		padding: 0 2.5%;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: space-between;
-		@media(max-width: 768px) {
+		@include media($tablet) {
 			width: 100%;
+		}
+		@include media($mobile) {
+			// flex-direction: row;
+			position: relative;
+			display: block;
+			clear:both;
 		}
 	}
 	.grid-item--width2 { 
@@ -33,25 +54,52 @@
 	.highlight {
 		background: $accentColor;
 	}
+	.gridtop {
+		width: 70%;
+		height: 100%;
+		background-size: cover;
+		@include media($mobile) {
+		}
+		}
 	.gridbottom {
-		height: 10%;
+		height: 100%;
+		width: 30%;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: space-between;
+		background: $accentColor;
+		&__left {
+			text-transform: uppercase;
+		}
+		@include media($mobile) {
+		}
+		.gridButton {
+			background: #333;
+			color: white;
+			text-align: center;
+			padding: 5px;
+			display: block;
+			margin: 10px;
+			@include media($mobile) {
+				width: 75%;
+				margin: 10px auto;
+				padding: 10px;
+				display: block;
+			}
+
+			&__more {
+			}
+			&__see {
+			}
+		}
 		p {
-		margin: 0;
-		padding: 5px;
+			margin: 0;
+			padding: 5px;
+			@include media($mobile) {
+				padding: 10px;
+			}
 		}
 	}
-	.gridtop {
-		width: 100%;
-		height: 90%;
-		overflow: hidden;
-		background-size: cover;
-		a {
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
-		}
+
 }

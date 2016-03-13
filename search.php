@@ -1,8 +1,8 @@
-<?php get_header(); ?>
-<div class="main">
-	<div class="container">
-
-		<div class="content">
+<?php get_template_part('header-blog'); ?>
+<?php get_template_part('nav');?>
+ <section id="blogHome">
+  <div class="blogWrapper">
+  <div class="blogHome">
 			<?php if ( have_posts() ) : ?>
 
 				<h1>Search Results for: <?php echo get_search_query(); ?></h1>
@@ -15,11 +15,9 @@
 				<?php get_search_form(); ?>
 
 			<?php endif; ?>
-		</div> <!-- /.content -->
-
-		<?php get_sidebar(); ?>
-
-	</div><!-- /.container -->
-</div> <!-- /.main -->
+</div>
+    <?php get_sidebar(); ?>
+</div>
+</section>
 
 <?php get_footer(); ?>

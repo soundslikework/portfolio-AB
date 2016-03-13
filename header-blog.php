@@ -13,18 +13,17 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-<header style="background-image:url(<?php echo header_image()?>);">
+<div class="blogHeader" style="background-image:url(<?php echo header_image()?>);">
   <div class="wrapper">
     <div class="header__title">
     <div class="header__title--box">
       <h1 class="header__title--firstName">
-        <?php the_field('header_first_name'); ?>
+        Adam Brady
     </h1>
       <h1 class="header__title--surname">
-        <?php the_field('header_surname');?>
+        Blog
     </h1>
     </div> <!--end title box -->
     </div> <!--end header title -->
   </div> <!-- end wrapper --> 
-</header><!--end header-->
+</div><!--end header-->

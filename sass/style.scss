@@ -18,6 +18,7 @@
 @import 'front-page';
 @import 'header';
 @import 'grid';
+@import 'bloghome';
 /*
 ====================================
 Default Styling
@@ -47,7 +48,9 @@ body {
 .full {
 	width: 100%;
 }
-
+.highlight {
+	color: $tomato;
+}
 
 
 
