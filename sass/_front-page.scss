@@ -4,6 +4,9 @@ h2.fpTitle, h3.fpTitle {
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
+	@include media($mobile) {
+		width: 30%;
+	}
 	&:after {
 		content: '';
 		display: block;
@@ -30,12 +33,18 @@ ul.aboutIcons {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	@include media($mobile) {
+		flex-wrap: wrap;
+	}
 	li {
 		width: 20%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		@include media($mobile) {
+			width: 50%;
+		}
 	}
 	i {
 		font-size: 2rem;
@@ -75,6 +84,11 @@ ul.aboutIcons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	@include media($tablet) {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .blogPost {
 	display: flex;
@@ -105,16 +119,27 @@ ul.aboutIcons {
 	justify-content: center;
 	margin-right: 5%;
 	text-align: center;
+	@include media($tablet) {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 .postContainer {
 	width: 50%;
 	display: flex;
 	flex-flow: row wrap;
+	@include media($tablet) {
+		width: 90%;
+
+	}
 }
 .profileText {
 	padding: 2% 0;
 	width: 60%;
 	margin: 0 auto;
+	@include media($tablet) {
+		width: 80%;
+	}
 }
 ul.workflowIcons {
 	list-style: none;

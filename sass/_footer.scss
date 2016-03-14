@@ -16,6 +16,9 @@ div.wpcf7 {
 	margin: 0 auto;
 	width: 30%;
 	font-family: $parFont;
+	@include media($mobile) {
+		width: 75%;
+	}
 	input[type=text], input[type=email], textarea {
 		width: 100%;
 		border: none;

@@ -11,6 +11,11 @@
 			padding: 5px;
 			border: 2px solid $accentColor;
 			margin-right: 2%;
+			@include media($tablet) {
+				margin-right: 0;
+				padding: 0;
+				width: 100%;
+			}
 		}
 		input[type=submit] {
 			background: $alt2BG;
