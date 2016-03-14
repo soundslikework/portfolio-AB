@@ -25,17 +25,31 @@ $tablet: new-breakpoint(max-width 768px 12);
 /*TRIANGLES */
 
 /*AFTER IS LEFT, BEFORE IS RIGHT */
-$triangle: 80px 0 0 865px;
-$triangleRev: 80px 400px 0 0;
-$triangleB: 80px 900px 0 0;
-$triangleBRev: 80px 0 0 400px;
+$triangle: 80px 0 0 1200px;
+$triangleRev: 80px 700px 0 0;
+$triangleB: 80px 0 0 900px;
+$triangleBRev: 80px 400px 0 0;
 
 /* size & color assignment */
-header {
-	// @include background($mainBG, url('images/PAM_8797.jpg'));
+#mainHeader {
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
+	overflow:hidden;		
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		right: 0;	
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: $triangleRev;
+		border-color: transparent $mainBG transparent transparent;
+		@include media($tablet) {
+			border-width: $triangleBRev;
+		}
+	}
 	&:after {
 		content: "";
 		position: absolute;
@@ -46,49 +60,63 @@ header {
 		border-style: solid;
 		border-width: $triangle;
 		border-color: transparent transparent transparent $mainBG;
-		}	
+		@include media($tablet) {
+			border-width: $triangleB;
+			}
+		}
 }
 	#about {
-		padding: 100px 0;
+		padding: 80px 0;
 		background: $mainBG;
 		position: relative;
 		&:before {
 			content: "";
 			position: absolute;
-			top: -80px;
+			bottom: -80px;
 			right: 0;
 			width: 0;
 			height: 0;
+			z-index: 1;
 			border-style: solid;
-			border-width: $triangleRev;
-			border-color: transparent $mainBG transparent transparent;
+			border-width: $triangle;
+			border-color: $mainBG transparent;
+			@include media($tablet) {
+				border-width: $triangleB;
+			}
 		}
 		&:after {
 			content: "";
 			position: absolute;
 			bottom: -80px;
-			z-index:1;
 			width: 0;
 			height: 0;
+			z-index:1;
 			border-style: solid;
 			border-width: $triangleRev;
 			border-color: $mainBG transparent;
+			@include media($tablet) {
+				border-width: $triangleBRev;
+			}
 		}
 	}
 	#folio {
 		background: $alt2BG;
 		position: relative;
 		padding: 100px 0;
+		overflow:hidden;
 		&:before {
 			content: "";
 			position: absolute;
-			top: 0px;
+			bottom: 0px;
 			right: 0;
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: $triangle;
-			border-color: $mainBG transparent;
+			border-width: $triangleRev;
+			border-color: transparent $mainBG;
+			@include media($tablet) {
+				border-width: $triangleBRev;
+			}
 		}
 		&:after {
 			content: "";
@@ -99,22 +127,29 @@ header {
 			border-style: solid;
 			border-width: $triangle;
 			border-color: transparent $mainBG;
+			@include media($tablet) {
+				border-width: $triangleB;
+			}
 		}	
 	}
 	#blog {
 		position: relative;
-		padding: 100px 0;
+		padding: 50px 0;
 		background: $mainBG;
 		&:before {
 			content: "";
 			position: absolute;
-			top: -80px;
-			right: 0;
+			bottom: -80px;
+			left: 0;
 			width: 0;
 			height: 0;
+			z-index:1;
 			border-style: solid;
 			border-width: $triangleRev;
-			border-color: transparent $mainBG;
+			border-color: $mainBG transparent;
+			@include media($tablet) {
+				border-width: $triangleBRev;
+			}
 		}
 		&:after {
 			content: "";
@@ -122,54 +157,80 @@ header {
 			position: absolute;
 			bottom: -80px;
 			width: 0;
+			right: 0;
 			height: 0;
 			border-style: solid;
-			border-width: $triangleRev;
+			border-width: $triangle;
 			border-color: $mainBG transparent;
+			@include media($tablet) {
+				border-width: $triangleB;
+			}
 		}
 	}
 	#profile {
 		position: relative;
 		background: $darkBG;
 		padding: 100px 0;
+		overflow:hidden;
 		&:before {
-			content: "";
-			position: absolute;
-			top: 0px;
-			right: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: $triangle;
-			border-color: $mainBG transparent;
-		}
-		&:after {
 			content: "";
 			position: absolute;
 			bottom: 0px;
-			left: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: $triangle;
-			border-color: transparent $alt2BG;
-		}	
-	}
-footer {
-	padding: 20px 0;
-	position: relative;
-	background: $alt2BG;
-		&:before {
-			content: "";
-			position: absolute;
-			top: -80px;
 			right: 0;
 			width: 0;
 			height: 0;
 			border-style: solid;
 			border-width: $triangleRev;
 			border-color: transparent $alt2BG;
+				@include media($tablet) {
+				border-width: $triangleBRev;
+			}
 		}
+				&:after {
+			content: "";
+			z-index:1;
+			position: absolute;
+			bottom: 0px;
+			width: 0;
+			left: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $triangle;
+			border-color: transparent $alt2BG;
+				@include media($tablet) {
+				border-width: $triangleB;
+			}
+		}
+
+	}
+footer {
+	padding: 20px 0;
+	position: relative;
+	background: $alt2BG;
+	// overflow: hidden;
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -80px;
+		// 	right: 0;
+		// 	width: 0;
+		// 	height: 0;
+		// 	border-style: solid;
+		// 	border-width: $triangleRev;
+		// 	border-color: transparent $alt2BG;
+		// }
+		// 		&:after {
+		// 	content: "";
+		// 	z-index:1;
+		// 	position: absolute;
+		// 	top: -80px;
+		// 	width: 0;
+		// 	left: 0;
+		// 	height: 0;
+		// 	border-style: solid;
+		// 	border-width: $triangle;
+		// 	border-color: transparent $alt2BG;
+		// }
 }
 aside {
 	background: rgba(245,245,245,0.9);
@@ -202,11 +263,8 @@ a {
 		color: $fontColor;
 	}
 }
-footer {
+#contact {
 	.contactEmail {
-		p {
-			// font-size: 1rem;
-		}
 		a {
 			font-size: 1.4rem;
 		}

@@ -19,6 +19,7 @@
 @import 'header';
 @import 'grid';
 @import 'bloghome';
+@import 'singleport';
 /*
 ====================================
 Default Styling
@@ -36,7 +37,6 @@ body {
 .wrapper {
 	max-width: 1080px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 .content {

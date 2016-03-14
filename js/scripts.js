@@ -2,7 +2,7 @@ var app = {};
 app.init = function() {
 	app.grids();
 	app.nav();
-	app.scrolly();
+	app.navScroll();
 };
 app.grids = function() {
 	$('.grid').isotope({
@@ -26,7 +26,7 @@ app.nav = function() {
   		$('aside').toggleClass('open');
 	});
 };
-app.scrolly = function() {
+app.navScroll = function() {
 	$('aside a').on('click', function() {
 		$('aside a').smoothScroll();
   		$('.hamburger').toggleClass('close');

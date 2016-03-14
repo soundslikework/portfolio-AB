@@ -1,4 +1,4 @@
-footer {
+#contact {
 	.footerCopy {
 		text-align: center;
 	}
@@ -16,6 +16,9 @@ div.wpcf7 {
 	margin: 0 auto;
 	width: 30%;
 	font-family: $parFont;
+	@include media($tablet) {
+		width: 50%;
+	}
 	@include media($mobile) {
 		width: 75%;
 	}
@@ -23,7 +26,8 @@ div.wpcf7 {
 		width: 100%;
 		border: none;
 		padding: 5px 0;
-		background: $altBG;
+		background: none;
+		border-bottom: 1px solid $darkBG;
 	}
 	.wpcf7-submit {
 		margin: 0 auto;

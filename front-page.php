@@ -3,6 +3,16 @@
 <section id="about">
     <div class="wrapper">
         <h2 class="fpTitle">About Me</h2>
+
+        <div class="aboutText">
+          <div class="aboutLeft">
+            <h4><?php the_field('about_text_left')?></h4>
+          </div>
+          <div class="aboutCenter">
+            <p><?php the_field('about_text_center')?></p>
+            <p><?php the_field('about_text_right')?> </p>
+          </div>
+      </div><!--end abouttext -->
           <ul class="aboutIcons">
           <?php while (has_sub_field('skills')) { ?>
             <li>
@@ -11,18 +21,6 @@
             </li>
           <?php }?>
         </ul>
-        <div class="aboutText">
-        <div class="aboutLeft">
-            <p><?php the_field('about_text_left')?></p>
-        </div>
-        <div class="aboutCenter">
-          <p><?php the_field('about_text_center')?></p>
-        </div>
-        <div class="aboutRight">
-            <p><?php the_field('about_text_right')?> </p>
-        </div>
-      </div><!--end abouttext -->
-
     </div><!--end wrapper -->
 </section>
 <section id="folio">
@@ -77,9 +75,8 @@
   </div>
           <ul class="workflowIcons">
           <?php while (has_sub_field('devicons')) { ?>
-            <li>
+            <li title="<?php the_sub_field('label');?>">
             <?php  the_sub_field('class');?>
-            <p><?php the_sub_field('label'); ?></p>
             </li>
           <?php }?>
         </ul>

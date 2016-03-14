@@ -19,41 +19,43 @@
         <?php  $portQuery->the_post(); ?>
         <?php if ($portCounter === 0) {?>
           <div class="grid-item grid-item--width3 port-<?php echo $portCounter ?> <?php the_field('porttags') ?>">
-            <div class="gridtop" style="background-image:url(<?php echo the_field('portimg')?>"> 
+            <div class="gridtop" style="background-image:url(<?php echo the_field('portimg')?>)"> 
             </div>
             <div class="gridbottom">
-              <p class="gridbottom__left"><?php the_field('portname'); ?></p>
+              <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
-              <p class="gridbottom__right">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">More About This</a>
+              <div class="gridbottom__right">
+                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
                 <a class="gridButton gridButton__see" href="http://google.com">See Live</a>
-              </p>
+              </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
           </div>
         <?php } elseif ($portCounter === 2 || $portCounter === 3) {?>
           <div class="grid-item grid-item--width2 port-<?php echo $portCounter ?> <?php the_field('porttags') ?>">
-            <div class="gridtop" style="background-image:url(<?php echo the_field('portimg')?>"> 
+            <div class="gridtop" style="background-image:url(<?php echo the_field('portimg')?>)"> 
             </div>
             <div class="gridbottom">
-              <p class="gridbottom__left"><?php the_field('portname'); ?></p><p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
-              <p class="gridbottom__right">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">More About This</a>
+              <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
+              <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
+              <div class="gridbottom__right">
+                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
                 <a class="gridButton gridButton__see" href="<?php the_field('porturl');?>">See Live</a>
-              </p>
+              </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
           </div>
           <?php  } else { ?>
-            <div class="grid-item port-<?php echo $portCounter ?> <?php the_field('porttags') ?>">
-              <div class="gridtop" style="background-image:url(<?php echo the_field('portimg')?>"> 
+            <div class="grid-item grid-item__short port-<?php echo $portCounter ?> <?php the_field('porttags') ?>">
+              <div class="gridtop gridtop__short" style="background-image:url(<?php echo the_field('portimg')?>)"> 
               </div>
-            <div class="gridbottom">
-              <p class="gridbottom__left"><?php the_field('portname'); ?></p><p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
-              <p class="gridbottom__right">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">More About This</a>
+            <div class="gridbottom gridbottom__short">
+              <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
+              <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
+              <div class="gridbottom__right gridbottom__right--short">
+                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
                 <a class="gridButton gridButton__see" href="http://google.com">See Live</a>
-              </p>
+              </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
             </div>

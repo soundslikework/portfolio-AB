@@ -1,4 +1,4 @@
-<?php get_template_part('header-blog'); ?>
+<?php get_header(); ?>
 <?php get_template_part('nav');?>
   <section id="blogHome">
   <div class="blogWrapper">
