@@ -2,15 +2,16 @@
   <div class="wrapper">
   <h2 class="fpTitle">Contact</h2>
   <div class="contactEmail">
-  	<p>Let's make cool stuff!</p>
+  	<p>Let's make cool stuff! You can reach me at </p>
   	<a href="mailto:adam@adambrady.ca">adam [at] adambrady.ca</a>
+    <p>or just fill out the contact form below. Lookin' forward to hearing from you!</p>
   </div>
 	<?php echo do_shortcode('[contact-form-7 id="19" title="Contact"]');?>
 	    <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'social'
     )); ?>
-    <p>&copy; <?php echo date('Y'); ?> Adam Brady</p>
+    <p class="footerCopy">&copy; <?php echo date('Y'); ?> Adam Brady</p>
   </div>
 </footer>
 

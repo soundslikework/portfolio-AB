@@ -61,6 +61,7 @@ h2.entry-title {
 section#blogHome {
 	padding: 1% 0 5%;
 	position: relative;
+	background: $mainBG;
 				&:before {
 			content: "";
 			position: absolute;
@@ -93,5 +94,5 @@ section#blogHome {
 
 }
 .blogHome {
-	width: 75%;
+	width: 80%;
 }

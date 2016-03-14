@@ -28,7 +28,6 @@
 <section id="folio">
 <div class="wrapper">
   <h2 class="fpTitle">Portfolio</h2>
-  <!--Masonry folio -->
   <?php get_template_part('grid');?>
   </div>
 </section>
@@ -43,6 +42,9 @@
           <?php if($postCounter==1){echo '<div class="postContainer">';} ?>
         <article class="blogPost<?php if($postCounter==0) { echo ' first'; }?>">
               <div class="blogPost__content">
+                <?php if($postCounter==0){?>
+                <h3>Latest Post</h3>
+                <?php };?>
                     <?php the_category();?>
                     <h3>
                       <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -54,7 +56,7 @@
               </div>
                   <div class="blogPost__date">
                   <span class="blogPost__underline"></span>
-                  <div class="blogPost__date--year"><?php the_time('j F')?></div>
+                  <div class="blogPost__date--year"><p><?php the_time('j F')?></p></div>
               </div>
           </article>
           <?php if($postCounter == 4){echo '</div>';}?>

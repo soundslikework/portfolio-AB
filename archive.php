@@ -1,12 +1,11 @@
-<?php get_header(); ?>
-
-<div class="main">
-  <div class="container">
-    <div class="content">
-
+<?php get_template_part('header-blog'); ?>
+<?php get_template_part('nav'); ?>
+<section id="blogHome">
+  <div class="blogWrapper">
+    <div class="blogHome">
       <?php if ( have_posts() ) the_post(); ?>
 
-      <h1>
+      <h2>
         <?php if ( is_day() ) : ?>
           Daily Archives: <?php the_date(); ?>
         <?php elseif ( is_month() ) : ?>
@@ -16,7 +15,7 @@
         <?php else : ?>
           Blog Archives
         <?php endif; ?>
-      </h1>
+      </h2>
 
       <?php
     	/* Since we called the_post() above, we need to
@@ -31,12 +30,10 @@
     	 */
       get_template_part( 'loop', 'archive' );
       ?>
-
-    </div><!--/content-->
+    </div> <!--/.content -->
 
     <?php get_sidebar(); ?>
-
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+  </div> <!-- /.wrapper -->
+  </section>
 
 <?php get_footer(); ?>

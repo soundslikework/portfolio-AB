@@ -47,7 +47,7 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Raleway:700,300|Open+Sans|Merriweather');
+	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Martel+Sans:700,300|Roboto+Slab|Open+Sans|Merriweather');
 	wp_enqueue_style('devicons', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css?ver=4.4.2');
 }
 
@@ -142,7 +142,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 

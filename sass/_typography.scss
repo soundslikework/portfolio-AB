@@ -4,8 +4,9 @@ $mainBG: #F8F8FF; /*ghostwhite */
 $altBG: #F5F5F5; /* whitesmoke */
 $alt2BG: #DCDCDC; /* darkslategrey*/
 $fontColor: black;
-$accentColor: #5F9EA0;  
-$tomato: #FF6347; /*tomato*/
+$accentColor: #CD5C5C;  
+$tomato: #CD5C5C; /*tomato*/
+$origTomato: #FF6347; /*original tomato*/
 $blue: #5F9EA0; /*cadetblue*/
 $secondBG: #F0F8FF;
 $snow: #FFFAFA;
@@ -13,9 +14,9 @@ $darkBG: #696969;
 
 /* fonts */
 
-$titleFont: 'Raleway', serif;
-$parFont: 'Open Sans', sans-serif;
-$altFont: 'Merriweather', serif;
+$titleFont: 'Martel Sans', serif;
+$altFont: 'Open Sans', sans-serif;
+$parFont: 'Roboto Slab', serif;
 
 /* RESPONSIVENESS */
 $mobile: new-breakpoint(max-width 480px 12);
@@ -193,17 +194,28 @@ h1, h2, h3 {
 	margin-top: 0;
 }
 a {
-	color: $tomato;
+	color: $accentColor;
+	font-family: $parFont;
 	text-decoration: none;
+	transition: all 0.5s;
 	&:hover {
-		color: #D424B1;
+		color: $fontColor;
 	}
 }
-
+footer {
+	.contactEmail {
+		p {
+			// font-size: 1rem;
+		}
+		a {
+			font-size: 1.4rem;
+		}
+	}
+}
 /* paragraphs */
 
 p {
-	line-height: 1.5;
+	line-height: 1.4;
 	font-family: $parFont;
 }
 
@@ -246,11 +258,7 @@ pre {
 }
 
 
-/*
-====================================
-Global Classes / Wordpress Specific
-====================================
-*/
+/* Global Classes / Wordpress Specific */
 
 .aligncenter {
 	text-align: center;
@@ -278,4 +286,18 @@ img {
 	width: 100%;
 	float: left;
 	clear: both;
+}
+
+/** FONT SIZES **/
+h2 {
+	font-size: 1.4rem;
+}
+h3 {
+	font-size: 1.2rem;
+}
+h4 {
+	font-size: 1rem;
+}
+p {
+	font-size: 0.8rem;
 }

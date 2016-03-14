@@ -1,7 +1,7 @@
     <div class="button-group filter-button-group">
       <button data-filter="*">show all</button>
+      <button data-filter=".js">Interactive & API</button>
       <button data-filter=".html">Layout & Style</button>
-      <button data-filter=".js">Interactive</button>
       <button data-filter=".wp">Wordpress</button>
     </div>
     <div class="grid">
@@ -39,7 +39,7 @@
               <p class="gridbottom__left"><?php the_field('portname'); ?></p><p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <p class="gridbottom__right">
                 <a href="<?php the_permalink();?>" class="gridButton gridButton__more">More About This</a>
-                <a class="gridButton gridButton__see" href="http://google.com">See Live</a>
+                <a class="gridButton gridButton__see" href="<?php the_field('porturl');?>">See Live</a>
               </p>
               <?php $portCounter = $portCounter + 1; ?>
             </div>

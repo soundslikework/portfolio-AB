@@ -1,12 +1,12 @@
 footer {
-	p {
+	.footerCopy {
 		text-align: center;
 	}
 }
 .contactEmail {
 	width: 80%;
 	margin: 0 auto;
-	padding: 1% 0;
+	padding: 0 0 1%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,11 +15,23 @@ footer {
 div.wpcf7 {
 	margin: 0 auto;
 	width: 30%;
+	font-family: $parFont;
 	input[type=text], input[type=email], textarea {
 		width: 100%;
 		border: none;
 		padding: 5px 0;
-		background: $mainBG;
+		background: $altBG;
+	}
+	.wpcf7-submit {
+		margin: 0 auto;
+		padding: 5px;
+		background: none;
+		border: 2px solid $accentColor;
+		transition: all 0.5s;
+		&:hover {
+			background: $darkBG;
+			color: $mainBG;
+		}
 	}
 }
 ul#menu-social {

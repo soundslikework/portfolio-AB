@@ -18,10 +18,7 @@
     <div class="header__title">
     <div class="header__title--box">
       <h1 class="header__title--firstName">
-        Adam Brady
-    </h1>
-      <h1 class="header__title--surname">
-        Blog
+        blog
     </h1>
     </div> <!--end title box -->
     </div> <!--end header title -->
