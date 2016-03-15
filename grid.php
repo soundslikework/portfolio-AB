@@ -26,7 +26,7 @@
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right">
                 <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" href="http://google.com">See Live</a>
+                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
@@ -40,7 +40,7 @@
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right">
                 <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" href="<?php the_field('porturl');?>">See Live</a>
+                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
@@ -54,7 +54,7 @@
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right gridbottom__right--short">
                 <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" href="http://google.com">See Live</a>
+                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>

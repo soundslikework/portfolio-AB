@@ -82,7 +82,8 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: space-between;
-		background: $accentColor;
+		background: url('images/stardust.png'), $accentColor;
+		background-blend-mode:overlay;
 		color: $mainBG;
 		&__short {
 			height: 50%;

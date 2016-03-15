@@ -3,6 +3,7 @@
 	position: relative;
 	background-attachment: fixed;
 	background-size: cover;
+	overflow:hidden;
 	&:after {
 		content: "";
 		position: absolute;
@@ -40,6 +41,10 @@
 	position: relative;
 	padding: 0 0 4%;
 	background: $mainBG;
+	overflow:hidden;
+	@include media ($tablet) {
+		padding: 0 0 15%;
+	}
 				&:before {
 			content: "";
 			position: absolute;
@@ -74,14 +79,50 @@
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		align-items: flex-start;
+		justify-content: space-around;
+		align-items: center;
+		@include media($tablet) {
+			width: 70%;
+		}
 	}
 	&__sidebar {
 		width: 20%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		@include media($tablet) {
+			width: 30%;
+		}
+		a {
+			display: block;
+			width: 50%;
+			text-align: center;
+			padding: 10px;
+			border: 2px solid $accentColor;
+			text-transform: uppercase;
+			background: none;
+			transition: all 0.5s;
+			&:hover {
+				background: $darkBG;
+				color: $mainBG;
+			}
+		}
 	}
 	&__image {
 		width: 50%;
+	}
+}
+ul.langList {
+	padding-left: 0;
+	list-style: none;
+	margin-top: 0;
+	li {
+		background: $alt2BG;
+		color: $accentColor;
+		text-transform: uppercase;
+		padding: 5px;
+		margin: 10px;
 	}
 }
 #nav-below {

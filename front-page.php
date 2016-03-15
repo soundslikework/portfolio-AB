@@ -47,10 +47,8 @@
                     <h3>
                       <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
                   </h3>
-                    <?php if($postCounter>0) {?>
                       <p><?php the_excerpt(); ?></p>
                       <p><?php hackeryou_continue_reading_link(); ?></p>
-                      <?php }?>
               </div>
                   <div class="blogPost__date">
                   <span class="blogPost__underline"></span>

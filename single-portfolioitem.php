@@ -28,14 +28,18 @@
         </div><!-- #post-## -->
 
     <div class="portfolioSItem__sidebar">
-      <h2>Languages Used</h2>
+      <h3>Languages Used</h3>
       <ul class="langList">
         <?php while (has_sub_field('sidebartags')) {?>
         <li>
-          <?php the_sub_field('sidebartagstag')?>
+          <?php the_sub_field('sidebartagstag');?>
         </li>
         <?php } ?>
       </ul>
+      <?php if (get_field('gitlink')) { ?>
+      <a class="gitLink" href="<?php the_field('gitlink');?>">Check it out on gitHub!</a>
+     <?php } ?>
+     <a class="viewLink" href="<?php the_field('porturl');?>" target="_blank">See Live</a>
     </div><!-- end portfolio sidebar -->
     </div> <!-- /.content -->
   <?php endwhile; // end of the loop. ?>
