@@ -119,10 +119,20 @@
 			border: 2px solid $mainBG;
 			color: $mainBG;
 			text-align: center;
-			padding: 10px;
+			padding: 10px 0;
+			width: 50%;
 			display: block;
-			margin: 5px;
+			margin: 5px auto;
 			transition: all 0.5s;
+			@include media($tablet) {
+				width: 90%;
+			}
+			&__short {
+				width: 30%;
+				@include media($tablet) {
+					width: 90%;
+				}
+			}
 			&:hover {
 				background: $mainBG;
 				color: $darkBG;

@@ -25,8 +25,8 @@
               <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
+                <a href="<?php the_permalink();?>" class="gridButton">Learn More</a>
+                <a class="gridButton" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
@@ -39,8 +39,8 @@
               <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
+                <a href="<?php the_permalink();?>" class="gridButton">Learn More</a>
+                <a class="gridButton" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
@@ -53,8 +53,8 @@
               <h4 class="gridbottom__left"><?php the_field('portname'); ?></h4>
               <p class="gridbottom__center"><?php the_field('portabstract'); ?></p>
               <div class="gridbottom__right gridbottom__right--short">
-                <a href="<?php the_permalink();?>" class="gridButton gridButton__more">Learn More</a>
-                <a class="gridButton gridButton__see" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
+                <a href="<?php the_permalink();?>" class="gridButton gridButton__short">Learn More</a>
+                <a class="gridButton gridButton__short" target="_blank" href="<?php the_field('porturl');?>">See Live</a>
               </div>
               <?php $portCounter = $portCounter + 1; ?>
             </div>
