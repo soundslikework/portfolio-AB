@@ -31,7 +31,7 @@
 </section>
 <section id="blog">
 <div class="wrapper">
-  <h2 class="fpTitle">On The Blog</h2>
+  <h2 class="fpTitle">From My Blog</h2>
   <div class="fpBlog">
       <?php $postslist = get_posts('numberposts=5');
         $postCounter = 0;
@@ -43,7 +43,6 @@
                 <?php if($postCounter==0){?>
                 <h3>Latest Post</h3>
                 <?php };?>
-                    <?php the_category();?>
                     <h3>
                       <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?></a>
                   </h3>
@@ -64,13 +63,14 @@
 </section>
 <section id="profile">
 <div class="wrapper">
-<h2 class="fpTitle wTitle">Workflow</h2>
+<h2 class="fpTitle wTitle">How I Work</h2>
 
   <!--Highlight enthusiasm, willingness to learn. Use text setup from persona type -->
   <div class="profileText">
-    <p><?php the_field('profile_text')?></p>
+    <p><?php the_content()?></p>
     <p>This week, I'm excited to be working on <?php the_field('this_week_im_excited')?></p>
   </div>
+  <h2 class="fpTitle wTitle">What I Use</h2>
           <ul class="workflowIcons">
           <?php while (has_sub_field('devicons')) { ?>
             <li title="<?php the_sub_field('label');?>">

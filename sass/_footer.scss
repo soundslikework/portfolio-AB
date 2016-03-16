@@ -4,14 +4,19 @@
 	}
 }
 .contactEmail {
-	width: 80%;
-	margin: 0 auto;
+	width: 40%;
+	margin: 20px auto;
 	padding: 0 0 1%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
+	@include media($tablet) {
+		width: 65%;
+	}
+	p {
+		text-align: left;
+		width: 100%;
+	}
 }
 div.wpcf7 {
 	margin: 0 auto;

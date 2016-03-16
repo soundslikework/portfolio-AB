@@ -95,19 +95,20 @@
 				height: 100%;
 				width: 30%;
 			}
-
 		}
 		&__left {
 			text-transform: uppercase;
 			text-align: center;
 			font-family: $titleFont;
 			padding: 5px;
+			margin: 5px;
 			@include media($tablet) {
 				padding: 0;
 			}
 		}
 		&__center {
 			text-align: center;
+			vertical-align: center;
 		}
 		&__right {
 			text-transform: uppercase;
@@ -126,9 +127,9 @@
 			color: $mainBG;
 			text-align: center;
 			padding: 10px 0;
-			width: 50%;
+			width: 60%;
 			display: block;
-			margin: 5px auto;
+			margin: 10px auto;
 			transition: all 0.5s;
 			@include media($tablet) {
 				width: 90%;

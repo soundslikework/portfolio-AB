@@ -1,18 +1,18 @@
 .fpTitle {
-	width: 15%;
+	width: 20%;
 	margin: 0 auto 2%;
 	text-align: center;
 	position: relative;
 	text-transform: uppercase;
 	@include media($tablet) {
-		width: 30%;
+		width: 50%;
 	}
 	&:after {
 		content: '';
 		display: block;
 		position: absolute;
 		top: -4px;
-		left: 5px;
+		left: 0;
 		height: 5px;
 		width: 50%;
 		border-bottom: 1px solid black;
@@ -129,7 +129,6 @@ ul.aboutIcons {
 	flex-direction: column;
 	justify-content: center;
 	margin-right: 5%;
-	text-align: center;
 	color: $mainBG;
 	@include media($tablet) {
 		width: 80%;
