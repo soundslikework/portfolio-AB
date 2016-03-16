@@ -19,8 +19,8 @@ $altFont: 'Open Sans', sans-serif;
 $parFont: 'Roboto Slab', serif;
 
 /* RESPONSIVENESS */
-$mobile: new-breakpoint(max-width 480px 12);
-$tablet: new-breakpoint(max-width 768px 12);
+$mobile: new-breakpoint(max-width 480px);
+$tablet: new-breakpoint(max-width 768px);
 
 /*TRIANGLES */
 
@@ -29,6 +29,73 @@ $triangle: 80px 0 0 1200px;
 $triangleRev: 80px 700px 0 0;
 $triangleB: 80px 0 0 900px;
 $triangleBRev: 80px 300px 0 0;
+
+/* FONT VARIABLES */
+$p-font-sizes: (
+	null: 0.8rem,
+  480px : 0.6rem,
+  768px	: 0.7rem
+);
+$h1-font-sizes: (
+	null: 2.4rem,
+	480px: 2rem,
+	768px: 2.2rem
+	);
+$h2-font-sizes: (
+	null: 1.8rem,
+	480px: 1.2rem,
+	768px: 1.7rem
+);
+$h3-font-sizes: (
+	null	: 1.2rem,
+	480px	: 0.7rem,
+	768px	: 0.8rem
+	);
+$h4-font-sizes: (
+	null: 1.4rem,
+	480px: 0.8rem,
+	768: 1.2rem
+	);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (max-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+/** FONT SIZES **/
+h1 {
+	font-size: 22px;
+	@include font-size($h1-font-sizes);
+}
+h2 {
+	font-size: 18px;
+	@include font-size($h2-font-sizes);
+}
+h3 {
+	font-size: 14px;
+	@include font-size($h3-font-sizes);
+}
+h4 {
+	font-size: 12px;
+	@include font-size($h4-font-sizes);
+}
+p {
+	font-size: 12px;
+	@include font-size($p-font-sizes);
+	line-height: 1.2;
+	font-family: $parFont;
+}
+button {
+	@include font-size($p-font-sizes);
+}
 
 /* size & color assignment */
 #mainHeader {
@@ -270,13 +337,6 @@ a {
 		}
 	}
 }
-/* paragraphs */
-
-p {
-	line-height: 1.4;
-	font-family: $parFont;
-}
-
 /*blockquotes*/
 
 blockquote {
@@ -344,18 +404,4 @@ img {
 	width: 100%;
 	float: left;
 	clear: both;
-}
-
-/** FONT SIZES **/
-h2 {
-	font-size: 1.4rem;
-}
-h3 {
-	font-size: 1.2rem;
-}
-h4 {
-	font-size: 1rem;
-}
-p {
-	font-size: 0.8rem;
 }

@@ -5,12 +5,15 @@
 	flex-direction: row;
 	justify-content: center;
 	padding: 2% 0;
+	@include media($tablet) {
+		width: 100%;
+	}
 	button {
 		font-family: $titleFont;
 		border: 2px solid $accentColor;
 		background: none;
 		margin: 0 1%;
-		padding: 10px;
+		padding: 5px;
 		text-transform: uppercase;
 		transition: all 0.5s;
 		&:hover {
