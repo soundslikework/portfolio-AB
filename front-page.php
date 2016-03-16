@@ -64,7 +64,7 @@
 </section>
 <section id="profile">
 <div class="wrapper">
-<h2 class="fpTitle">Workflow</h2>
+<h2 class="fpTitle wTitle">Workflow</h2>
 
   <!--Highlight enthusiasm, willingness to learn. Use text setup from persona type -->
   <div class="profileText">

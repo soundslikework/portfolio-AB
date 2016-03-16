@@ -1,4 +1,4 @@
-h2.fpTitle, h3.fpTitle {
+.fpTitle {
 	width: 15%;
 	margin: 0 auto 2%;
 	text-align: center;
@@ -130,10 +130,15 @@ ul.aboutIcons {
 	justify-content: center;
 	margin-right: 5%;
 	text-align: center;
+	color: $mainBG;
 	@include media($tablet) {
 		width: 80%;
 		margin: 0 auto;
 	}
+	.blogPost__underline {
+		border-bottom: 1px solid $mainBG;
+	}
+
 }
 .postContainer {
 	width: 50%;
@@ -148,6 +153,7 @@ ul.aboutIcons {
 	padding: 2% 0;
 	width: 60%;
 	margin: 0 auto;
+	color: $mainBG;
 	@include media($tablet) {
 		width: 80%;
 	}
@@ -162,10 +168,14 @@ ul.workflowIcons {
 	justify-content: space-between;
 	li {
 		width: 20%;
-		padding: 1%;
+		padding: 3%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		@include media($tablet) {
+			width: 30%;
+			padding: 5%;
+		}
 	}
 	i {
 		font-size: 2rem;

@@ -51,6 +51,18 @@ body {
 .highlight {
 	color: $accentColor;
 }
-
+.wTitle {
+	color: $mainBG;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -4px;
+		left: 5px;
+		height: 5px;
+		width: 50%;
+		border-bottom: 1px solid $mainBG;
+	}
+}
 
 

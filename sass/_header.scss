@@ -24,6 +24,7 @@
 		flex-direction: row wrap;
 		justify-content: center;
 		align-items: center;
+		color: $accentColor;
 		// text-transform: uppercase;
 		@include media($tablet) {
 			@include fill-parent();
@@ -38,14 +39,14 @@
 			font-weight:300;
 			position: relative;
 				&:after {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		height: 1px;
-		width: 25%;
-		border-bottom: 1px solid black;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					height: 1px;
+					width: 25%;
+					border-bottom: 1px solid $accentColor;
 		}
 	}
 		&--surname {

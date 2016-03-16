@@ -99,6 +99,9 @@
 			text-align: center;
 			font-family: $titleFont;
 			padding: 5px;
+			@include media($tablet) {
+				padding: 0;
+			}
 		}
 		&__center {
 			text-align: center;
